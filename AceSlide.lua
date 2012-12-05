@@ -5,6 +5,7 @@ local function falseButtons(elem)
 			local sprite = elem:getChildAt(i)
 			if sprite.upState and sprite.downState then
 				sprite.focus = false
+				sprite:updateVisualState(false)
 			else
 				falseButtons(sprite)
 			end
