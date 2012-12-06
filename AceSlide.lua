@@ -3,7 +3,7 @@ local function falseButtons(elem)
 	if num > 0 then
 		for i = 1, num do
 			local sprite = elem:getChildAt(i)
-			if sprite.upState and sprite.downState then
+			if sprite.updateVisualState then
 				sprite.focus = false
 				sprite:updateVisualState(false)
 			else
